@@ -1,0 +1,32 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Blog website using MySQL, Express, React and Node.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProgrammingYatra/Blogging-Site.git"
+  },
+  "keywords": [
+    "MySQL",
+    "Express",
+    "React",
+    "Node.js"
+  ],
+  "author": "Rupam Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ProgrammingYatra/Blogging-Site/issues"
+  },
+  "homepage": "https://github.com/ProgrammingYatra/Blogging-Site#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.9.1"
+  }
+}

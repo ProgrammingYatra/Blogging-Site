@@ -1,8 +1,8 @@
-const  db  = require("../config/db");
+const db = require("../config/db");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
-export const register = (req, res) => {
+exports.register = (req, res) => {
   //CHECK EXISTING USER
   const q = "SELECT * FROM users WHERE email = ? OR username = ?";
 
@@ -24,7 +24,7 @@ export const register = (req, res) => {
   });
 };
 
-export const login = (req, res) => {
+exports.login = (req, res) => {
   //CHECK USER
 
   const q = "SELECT * FROM users WHERE username = ?";
@@ -54,7 +54,7 @@ export const login = (req, res) => {
   });
 };
 
-export const logout = (req, res) => {
+exports.logout = (req, res) => {
   res
     .clearCookie("access_token", {
       sameSite: "none",
@@ -63,3 +63,4 @@ export const logout = (req, res) => {
     .status(200)
     .json("User has been logged out.");
 };
+ 

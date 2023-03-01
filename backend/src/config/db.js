@@ -1,10 +1,18 @@
 const mysql = require("mysql");
 
 const db = mysql.createConnection({
-  host: process.env.HOST,
-  user: process.env.USERNAME,
-  password: process.env.PASSWORD,
-  database: process.env.DATABASE,
+  host: "localhost" || process.env.HOST,
+  user: "root" || process.env.USERNAME,
+  password: "root" || process.env.PASSWORD,
+  database: "blog" || process.env.DATABASE,
+  insecureAuth: true,
 });
-console.log("MySQL is Connected Successfully");
+
+db.connect((err) => {
+  if (err) {
+    console.log("Error occuress ", err.stack);
+    return;
+  }
+  console.log("MySQL is Conneccted to ", db.threadId);
+});
 module.exports = db;

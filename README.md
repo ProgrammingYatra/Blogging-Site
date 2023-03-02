@@ -3,7 +3,6 @@ Blog website using MySQL, Express, React and Node.js
 
 # clone it
 git clone https://github.com/ProgrammingYatra/Blogging-Site
-cd nodejs-express-rest-mysql-starter
 
 # Make it your own
 rm -rf .git && git init && npm init
